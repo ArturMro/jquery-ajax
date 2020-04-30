@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightblue;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1{
+    padding: 1em;
+
+}
+
+h2{
+    font-size: 2em;
+}
+
+#wrapper{
+    margin: 50px auto;
+    width: 80vw;
+    height: 80vh;
+}
+
+#button1, #button2, #getWeather, #mcrButton{
+    background-color: orangered;
+    padding: .5em;
+    font-size: 1.25em;
+    color: white;
+    text-transform: uppercase;
+    margin: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+#button1:hover,#button2:hover, #getWeather:hover, #mcrButton:hover{
+    color: black;
+}
+
+#dataContainer1, #dataContainer2{
+    width:90%;
+    height: 200px;
+    margin: 2em auto;
+    background-color: lightgoldenrodyellow;
+    padding: 1em;
+}
+
+.weatherItems{
+    background-color: lightgray;
+    min-width: 10px;
+    border: 1px solid grey;
+    width:80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.weatherItems p{
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: .5em;
+}
+
+.weatherItems p:last-child{
+    background-color: gray;
+
+}
+
+#mcrData{
+    padding: .5em;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

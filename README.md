@@ -1,1 +1,1 @@
-# jquery-ajax
+https://arturmro.github.io/jquery-ajax/

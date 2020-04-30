@@ -17,6 +17,11 @@ h1{
 
 h2{
     font-size: 2em;
+    margin-top: 1em;
+}
+
+h3{
+    width: 100%;
 }
 
 #wrapper{
@@ -25,7 +30,20 @@ h2{
     height: 80vh;
 }
 
-#button1, #button2, #getWeather, #mcrButton{
+.oddBox, .evenBox{
+    width: 100%;
+    padding: 1em;
+}
+
+.oddBox{
+    background-color: rgb(250, 211, 204);
+}
+
+.evenBox{
+    background-color: rgb(198, 248, 248);
+}
+
+#button1, #button2, #getWeather, #mcrButton1, #mcrButton2{
     background-color: orangered;
     padding: .5em;
     font-size: 1.25em;
@@ -36,7 +54,7 @@ h2{
     cursor: pointer;
 }
 
-#button1:hover,#button2:hover, #getWeather:hover, #mcrButton:hover{
+#button1:hover,#button2:hover, #getWeather:hover, #mcrButton1:hover, #mcrButton2:hover{
     color: black;
 }
 
@@ -69,14 +87,28 @@ h2{
 
 }
 
-#mcrData{
+#mcrData1, #mcrData2{
     padding: .5em;
-    border: 1px solid red;
+    
 }
 
+/*rating*/
+#rating{
+    background-color: indianred;
+    width: 80%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
 
-
-
+.fa-star{
+    color: white;
+    margin: .2em;
+    font-size: 2em;
+}
 
 
 

@@ -5,6 +5,9 @@
   <title>My Web Page Title</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- script src="scripts/jquery-3.4.1.min.js"></script -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -16,7 +19,9 @@
 
 
     <div id="wrapper">
-        <h1>jQuery AJAX</h1>
+      <h1>jQuery AJAX</h1>
+      <div class="oddBox">
+
         <p>In box below will apear data from my GitHub page after clicking button</p>
         <button id="button1">Press me now!!</button>
         <p id="dataContainer1">(this works but need fresh link to github every few mins)</p>
@@ -25,28 +30,30 @@
         <p>This method will load only values without key words and will leave data whatever already existing in place we are loading new data.</p>
         <button id="button2">Press me now!!</button>
         <p id="dataContainer2">(this works but need fresh link to github every few mins)</p>
-      
+      </div>
 
+      <div class="evenBox">
+          <h2>Get data from MCR with .get() method</h2>
+          <button id='mcrButton1'>Get MCR data</button>
+          <p id="mcrData1"></p>
 
-        <h2>Get data from MCR</h2>
-        <button id='mcrButton'>Get MCR data</button>
-        <p id="mcrData"></p>
+          <h2>Get data from MCR with .post() method</h2>
+          <button id='mcrButton2'>Get MCR data</button>
+          <p id="mcrData2"></p>
+      </div>
 
+      <div class="oddBox">
+        <div id="rating">
+          <h3>Rating form</h3>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="evenBox">
         <h2>Weather</h2>
         <p id="weatherApi"></p>
         <button id="getWeather">Current Weather</button>
@@ -57,7 +64,7 @@
         <div class="weatherItems"><p></p><p id=""></p></div>
         <div class="weatherItems"><p></p><p id=""></p></div>
         <div class="weatherItems"><p></p><p id=""></p></div>
-        
+      </div>
         
         
 

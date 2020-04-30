@@ -23,8 +23,8 @@ $(document).ready(function(){
     });
   });
 
-
-  $('#mcrButton').on('click', function(){
+// get method
+  $('#mcrButton1').on('click', function(){
     
     $.get('https://mycourseresource.com/mcr76/calc.php', 
       {"op" : "sub", "a":"5", "b":"7", "apikey":"1234"},
@@ -33,10 +33,38 @@ $(document).ready(function(){
         console.log(status);
       });
     
-    $('#mcrData').load('https://mycourseresource.com/mcr76/calc.php', {"op" : "sub", "a":"5", "b":"7", "apikey":"1234"});
+    $('#mcrData1').load('https://mycourseresource.com/mcr76/calc.php', {"op" : "sub", "a":"5", "b":"7", "apikey":"1234"});
   });
 
 
+//post method
+$('#mcrButton2').on('click', function(){
+    
+  $.post('https://mycourseresource.com/mcr76/contact.php', 
+    {"op" : "mul", "a":"6", "b":"7", "apikey":"1234"},
+    function(data, status){
+      console.log(data);
+      $('#mcrData2').html(data);
+      console.log(status);
+
+    });
+  
+  
+});
+
+//rating
+  //so we have 5 stars
+  //we need on users click to cound how many stars have been clicked
+  //and change icon or add background for rating
+
+
+var starCount = 0;
+$('.fa-star').on('click', function(){
+  //$(this).each(function(){});
+    starCount = starCount + 1;
+    console.log(starCount);
+  
+});
 
 
 
@@ -53,14 +81,7 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
+//weather
 
   $('#getWeather').on('click', function(){
     console.log('Weather button has been clicked');

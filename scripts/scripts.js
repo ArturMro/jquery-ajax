@@ -9,12 +9,11 @@ $(document).ready(function(){
 
   $('#button1').on('click', function(){
     console.log('Button has been clicked');
-    $('#dataContainer1').load("https://raw.githubusercontent.com/ArturMro/MCR76-artur_00/master/data.json?token=AN333T5F6MKHYZZEPY4UV4K6VM4EW");//this link is different every time when we click raw on github, and stop work after few mins
-    
+    $('#dataContainer1').load("https://raw.githubusercontent.com/ArturMro/JSON/master/data.json");
   });
 
   $('#button2').on('click', function(){
-    $.getJSON("https://raw.githubusercontent.com/ArturMro/MCR76-artur_00/master/data.json?token=AN333T5F6MKHYZZEPY4UV4K6VM4EW", function(result){
+    $.getJSON("https://raw.githubusercontent.com/ArturMro/JSON/master/data.json", function(result){
       data = result;
       displayInConsole();
       $.each(result, function(i, field){

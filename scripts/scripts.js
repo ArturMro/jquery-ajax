@@ -23,7 +23,7 @@ $(document).ready(function(){
     });
   });
 
-// get method
+ // ***************************************get method*******************************************
   $('#mcrButton1').on('click', function(){
     
     $.get('https://mycourseresource.com/mcr76/calc.php', 
@@ -37,8 +37,8 @@ $(document).ready(function(){
   });
 
 
-//post method
-$('#mcrButton2').on('click', function(){
+ //*************************************post method**********************************************
+ $('#mcrButton2').on('click', function(){
     
   $.post('https://mycourseresource.com/mcr76/contact.php', 
     {"op" : "mul", "a":"6", "b":"7", "apikey":"1234"},
@@ -50,53 +50,46 @@ $('#mcrButton2').on('click', function(){
     });
   
   
-});
+ });
 
-//rating
+ //*******************************************rating********************************************
   //so we have 5 stars
   //we need on users click to cound how many stars have been clicked
   //and change icon or add background for rating
-
-
-var starCount = 0;
-$('.fa-star').on('click', function(){
-  //$(this).each(function(){});
+ var starCount = 0;
+ $('.fa-star').on('click', function(){
+   //this part meant to click how many stars have been clicked and than sent this info to server as rating(0-5) but need sort how to click star only once
     starCount = starCount + 1;
     console.log(starCount);
-  
-});
+ });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//weather
+ //*****************************************weather*****************************************
 
   $('#getWeather').on('click', function(){
-    console.log('Weather button has been clicked');
-    //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
-    //api.openweathermap.org/data/2.5/weather?lat={53}&lon={6}&appid={c4bea8c65dab79ca646282e78ce283f2}
-    $('#weatherApi').load("api.openweathermap.org/data/2.5/weather?lat={53}&lon={6}&appid={c4bea8c65dab79ca646282e78ce283f2}");
-    var weatherData = $('#weatherApi');
+      console.log('Weather button has been clicked');
+          //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
+          //api.openweathermap.org/data/2.5/weather?lat=53&lon=6&appid=c4bea8c65dab79ca646282e78ce283f2
+      $.get("api.openweathermap.org/data/2.5/weather?lat=53&lon=6&appid=c4bea8c65dab79ca646282e78ce283f2",
+      //('api.openweathermap.org/data/2.5/weather',
+      //{"lat": "53", "lon": "6","appid": "c4bea8c65dab79ca646282e78ce283f2"},
+      function(data, status){
+        console.log(data);
+        $('#weatherApi').html(data);
+        console.log(status);
+      }); 
+ 
+
+      
+
   });
 
+    
 
 
 
 
 
-
+   
 
 
 
@@ -104,6 +97,11 @@ $('.fa-star').on('click', function(){
   
  
 });
+
+
+var data;
+
+
 
 
 function addMyEventListeners(){

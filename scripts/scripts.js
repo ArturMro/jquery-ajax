@@ -68,9 +68,8 @@ $(document).ready(function(){
       console.log('Weather button has been clicked');
           //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
           //api.openweathermap.org/data/2.5/weather?lat=53&lon=6&appid=c4bea8c65dab79ca646282e78ce283f2
-      $.get("api.openweathermap.org/data/2.5/weather?lat=53&lon=6&appid=c4bea8c65dab79ca646282e78ce283f2",
-      //('api.openweathermap.org/data/2.5/weather',
-      //{"lat": "53", "lon": "6","appid": "c4bea8c65dab79ca646282e78ce283f2"},
+      $.get('api.openweathermap.org/data/2.5/weather',
+      {"lat": "53", "lon": "6","appid": "c4bea8c65dab79ca646282e78ce283f2"},
       function(data, status){
         console.log(data);
         $('#weatherApi').html(data);

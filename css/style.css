@@ -32,7 +32,7 @@ h3{
 
 .oddBox, .evenBox{
     width: 100%;
-    padding: 1em;
+    padding: 3em 1em;
 }
 
 .oddBox{
@@ -43,7 +43,7 @@ h3{
     background-color: rgb(198, 248, 248);
 }
 
-#button1, #button2, #getWeather, #mcrButton1, #mcrButton2{
+#button1, #button2, #getWeather, #mcrButton1, #mcrButton2, #ratingBtn{
     background-color: orangered;
     padding: .5em;
     font-size: 1.25em;
@@ -52,10 +52,12 @@ h3{
     margin: 1em 0;
     border: none;
     cursor: pointer;
+    box-shadow: 0 5px 5px 5px grey;
 }
 
-#button1:hover,#button2:hover, #getWeather:hover, #mcrButton1:hover, #mcrButton2:hover{
+#button1:hover,#button2:hover, #getWeather:hover, #mcrButton1:hover, #mcrButton2:hover, #ratingBtn:hover{
     color: black;
+    box-shadow: 0 2px 2px 2px grey;
 }
 
 #dataContainer1, #dataContainer2{
@@ -64,15 +66,76 @@ h3{
     margin: 2em auto;
     background-color: lightgoldenrodyellow;
     padding: 1em;
+    box-shadow: 2px 2px 5px black;
 }
+
+/*rating*/
+#ratingBox{
+    background-color: indianred;
+    width: 80%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2em;
+    box-shadow: 2px 2px 5px black;
+}
+
+.starsBox{
+    width:100%;
+    padding: 1em 0;
+}
+
+.fa-star{
+    color: white;
+    margin: .2em;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#ratingBox p{
+    width: 100%;
+    margin: .5em 0;
+}
+/*
+#ratingBox form{
+    width: 80%;
+    padding: 1em;
+}
+*/
+#ratingBox input{
+    border:1px solid black;
+    border-radius: 3px;
+    box-shadow: none;
+    margin-top: .5em;
+    width: 100%;
+    padding: .5em;
+    margin: .5em 0;
+}
+
+#ratingBox label{
+    text-align: left;
+}
+
+
+/*weather*/
+#weatherBox{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px black;
+}   
+
 
 .weatherItems{
     background-color: lightgray;
     min-width: 10px;
     border: 1px solid grey;
-    width:80%;
+    width:100%;
     display: flex;
-    margin: 0 auto;
 }
 
 .weatherItems p{
@@ -92,31 +155,11 @@ h3{
     
 }
 
-/*rating*/
-#rating{
-    background-color: indianred;
-    width: 80%;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
+#weatherApi{
+    overflow: auto;
+    margin: 1em auto;
+    max-width: 80%;
 }
-
-.fa-star{
-    color: white;
-    margin: .2em;
-    font-size: 2em;
-}
-
-#rating p{
-    width: 100%;
-    margin: .5em 0;
-}
-
-
-
 
 
 

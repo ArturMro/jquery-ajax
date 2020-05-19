@@ -20,6 +20,7 @@
 
     <div id="wrapper">
       <h1>jQuery AJAX</h1>
+<!--  -->
       <div class="oddBox">
 
         <p>In box below will apear data from my GitHub page after clicking button</p>
@@ -32,6 +33,7 @@
         <p id="dataContainer2">...</p>
       </div>
 
+<!-- get/post -->
       <div class="evenBox">
           <h2>Get data from MCR with .get() method</h2>
           <button id='mcrButton1'>Get MCR data</button>
@@ -42,29 +44,57 @@
           <p id="mcrData2"></p>
       </div>
 
+<!-- rating -->
       <div class="oddBox">
-        <div id="rating">
+        <div id="ratingBox">
           <h3>Rating form</h3>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <p>" <span id="usersRating"></span> "</p>
+          <div class="starsBox">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+          
+          <!--<form method="POST" action="">-->
+            <label for="name">What is yours name?</label>
+            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <label for="rating">What do you think about our...:</label>
+            <input type="text" name="rating" id="rating" placeholder="message" required/>
+            <button id='ratingBtn'>Submit</button>
+          <!--</form>-->
         </div>
       </div>
 
+<!-- weather -->
       <div class="evenBox">
         <h2>Weather</h2>
         
         <button id="getWeather">Current Weather</button>
         <p id="weatherApi"></p>
 
-        <div class="weatherItems"><p>Location:</p><p id="location">Swords</p></div>
-        <div class="weatherItems"><p>Temperature:</p><p id="temperature">&nbsp;</p></div>
-        <div class="weatherItems"><p>Wind</p><p id="wind">&nbsp;</p></div>
-        <div class="weatherItems"><p>Humidity:</p><p id="humidity">&nbsp;</p></div>
-        <div class="weatherItems"><p>Sky:</p><p id="sky">&nbsp;</p></div>
+        <div id="weatherBox">
+          <div class="weatherItems">
+            <p>Location:</p>
+            <p id="location">Swords</p>
+          </div>
+          <div class="weatherItems">
+            <p>Temperature:</p>
+            <p>&nbsp;<span id="temperature"></span> &#8451</p>
+          </div>
+          <div class="weatherItems">
+            <p>Wind:</p>
+            <p>&nbsp;<span id="wind"></span> KM/H</p>
+          </div>
+          <div class="weatherItems">
+            <p>Humidity:</p>
+            <p>&nbsp;<span id="humidity"></span> %</p>
+          </div>
+          <div class="weatherItems">
+            <p>Sky clouded:</p>
+            <p>&nbsp; <span id="sky"></span> %</p>
+          </div>
+        </div>
         
         
       </div>
